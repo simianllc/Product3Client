@@ -3,13 +3,13 @@ import React, { Component } from "react";
 export default class ProductBox extends Component {
   render() {
     return (
-      <div>
-        <h1>Product Component</h1>
+      <div className="container">
+        {/* <h1>Product Component</h1> */}
         <ul key={this.props.product._id}>
           <li>
-            <h3 key="">Product: {this.props.product.name}</h3>
+            <h2 key="">Product: {this.props.product.name}</h2>
           </li>
-          <li>Price: ${this.props.product.price} </li>
+          <li> Price: ${this.props.product.price} </li>
           <br />
           <li>Image Link: {this.props.product.image}</li>
           <br />

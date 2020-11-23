@@ -2,6 +2,15 @@
   font-size: 14px;
 }
 
+body {
+  display: flex;
+  justify-content: center;
+}
+
+ul {
+  list-style: none;
+}
+
 h1 {
   color: deeppink;
 }
@@ -11,7 +20,7 @@ h1 {
 }
 
 .item_hr {
-  width: 50%
+  width: 50%;
 }
 
 .product_name {
@@ -19,31 +28,26 @@ h1 {
 }
 
 .btn-primary {
-  border:none;
+  border: none;
 }
 
 .submit-btn {
   text-align: right;
 }
 
-.img-responsive{
-  width:396px;
+.img-responsive {
+  width: 396px;
 }
 
 .container {
-  width:396px;
+  width: 396px;
 }
 
 .carousel-container {
   width: 396px;
-  
 }
 
-
-
-
-
-
+.l
 
 /* body {
   margin: 0;
