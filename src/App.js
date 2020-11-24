@@ -141,7 +141,7 @@ export default class App extends Component {
               )} />
             <Route path="/cart" component={ProductCart} />
             <Route path="/login" component={Login} />
-            <Route path="/product-details/" component={ProductDetails} /> //Create a route for Product Details Page.
+            <Route path="/product-details/" component={ProductDetails} /> {/* Create a route for Product Details Page. */}
           </Switch>
         </div>
       </Router>
