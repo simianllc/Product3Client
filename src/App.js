@@ -136,9 +136,11 @@ export default class App extends Component {
             <Route path="/product" component={ProductGrid} />
             <Route path="/cart" component={ProductCart} />
             <Route path="/login" component={Login} />
+            <Route parth="/grid" component={ProductGrid} />
           </Switch>
         </div>
       </Router>
+      
     );
   }
 }

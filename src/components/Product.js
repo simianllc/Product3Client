@@ -6,41 +6,20 @@ export default class ProductBox extends Component {
       <div className="container">
         {/* <h1>Product Component</h1> */}
         <ul key={this.props.product._id}>
-          <li>
-            <h2 key="">Product: {this.props.product.name}</h2>
-          </li>
-          <li> Price: ${this.props.product.price} </li>
-          <br />
+          <li> Product: {this.props.product.name}</li>
+          <li> Price: ${this.props.product.price}</li>
           <li>Image Link: {this.props.product.image}</li>
-          <br />
           <li>Category: {this.props.product.category}</li>
-          <br />
           <li>Subcategory: {this.props.product.subcategory}</li>
-          <br />
           <li>Brand: {this.props.product.brand} </li>
-          <br />
           <li> Description: {this.props.product.description}</li>
-          <br />
-          <li>Quantity: {this.props.product.quantity} </li>
-          <br />
+          <li>Quantity: {this.props.product.quantity}</li>
           <li>Tags: {this.props.product.tags}</li>
-          <br />
-          <button onClick={() => this.editProduct(this.props.product._id)}>
-            EDIT
-          </button>
-          <button
-            onClick={() => this.props.deleteProduct(this.props.product._id)}
-          >
-            DELETE
-          </button>
+          <button onClick={() => this.editProduct(this.props.product._id)}>EDIT</button>
+          <button onClick={() => this.props.deleteProduct(this.props.product._id)}>DELETE</button>
         </ul>
         <div>
-          <img
-            src={this.props.product.image}
-            width="300"
-            alt=""
-            onClick={() => this.showProduct(this.props.product._id)}
-          ></img>
+          <img src="{this.props.product.image}" width="300" alt="" onClick={() => this.showProduct(this.props.product._id)} />
         </div>
       </div>
     );
