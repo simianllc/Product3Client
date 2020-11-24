@@ -8,6 +8,7 @@ import ProductGrid from "./components/ProductGrid.js";
 import ProductCart from "./components/ProductCart.js";
 import Inventory from "./components/Inventory.js";
 import Login from "./components/Login.js";
+import ProductDetails from './components/ProductDetails.js';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 console.log("App");
@@ -133,9 +134,14 @@ export default class App extends Component {
               )}
             />
             <Route path="/shop" component={ShoppingPage} />
-            <Route path="/product" component={ProductGrid} />
+            <Route path="/product" component={() => (
+                <ProductGrid
+                  products={this.state.products}
+                />
+              )} />
             <Route path="/cart" component={ProductCart} />
             <Route path="/login" component={Login} />
+            <Route path="/product-details/" component={ProductDetails} /> //Create a route for Product Details Page.
           </Switch>
         </div>
       </Router>
