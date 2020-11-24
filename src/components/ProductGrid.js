@@ -12,7 +12,7 @@ export default class ProductGrid extends Component {
                         return (
                             <div>
                                 <img src={product.image} width="100px" alt='' />
-                                <Link to={{pathname: '/product-details', state:{product: product}}}> // add Link to navigate to ProductDetails component and send the product that is clicked as the state.
+                                <Link to={{pathname: '/product-details', state:{product: product}}}> {/* add Link to navigate to ProductDetails component and send the product that is clicked as the state. */}
                                     <button className="view-product-btn">View</button>{/* button positioned at higher z-index and positioned over image*/}
                                 </Link>
                                 <ul>
