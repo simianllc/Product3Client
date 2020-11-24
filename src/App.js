@@ -133,7 +133,13 @@ export default class App extends Component {
               )}
             />
             <Route path="/shop" component={ShoppingPage} />
-            <Route path="/product" component={ProductGrid} />
+            <Route 
+              path="/product" 
+              component={() => ( //defined the component
+                <ProductGrid
+                  products={this.state.products} //sends in the property called product that comes from the state.
+                />)}   
+            />
             <Route path="/cart" component={ProductCart} />
             <Route path="/login" component={Login} />
             <Route parth="/grid" component={ProductGrid} />

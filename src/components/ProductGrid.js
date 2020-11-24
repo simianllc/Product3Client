@@ -1,32 +1,37 @@
 import React, { Component } from 'react'
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+
 
 export default class ProductGrid extends Component {
+
+// viewProduct = () =>{
+//     <Route path="/cart" component={ProductCart} />
+// };
+
     render() {
         return (
             <div className="container product-grid" >
                 <h1>PRODUCT GRID RENDERS</h1>
                 <div className="row">
                     {/* wrap this in a loop that produces additional div*/}
-                    {/* {this.props.products.map((product) => { */}
-                        {/* return( */}
+                    {this.props.products.map((product) => {
+                        return(
                     <div>
-                        <img src="https://media.gq-magazine.co.uk/photos/5dbc4d5a8da8f900083b9076/master/w_1000,c_limit/20191028-watch-guide-baume.jpg" width="100px" alt='' />
-                        <button className="view-product-btn">View</button>{/* button positioned at higher z-index and positioned over image*/}
+                        <img src={product.image} width="100px" alt='' />
+                        <Link to= '/'><button className="view-product-btn" >View</button></Link>{/* button positioned at higher z-index and positioned over image*/}
                         <ul>
-                                {/* <li>{this.props.product.brand}</li> */}
-                                <li>Product Brand</li>
-                                <li>Product Name</li>
-                                <li>Price</li>
+                                <li>{product.brand}</li>
+                                <li>{product.name}</li>
+                                <li>{product.price}</li>
                         </ul>
                     </div>
-                    {/* ); */}
-                {/* })} */}
+                    );
+                })}
 
 
-                    {/* wrap this in a loop that produces additional div*/}
-                    <div>
+                    {/* <div>
                         <img src="https://media.gq-magazine.co.uk/photos/5dbc4d5a8da8f900083b9076/master/w_1000,c_limit/20191028-watch-guide-baume.jpg" width="100px" alt='' />
-                        <button className="view-product-btn">View</button>{/* button positioned at higher z-index and positioned over image*/}
+                        <button className="view-product-btn">View</button>
                         <ul>
                                 <li>Product Brand</li>
                                 <li>Product Name</li>
@@ -37,7 +42,7 @@ export default class ProductGrid extends Component {
                 <div  className="row">
                     <div>
                         <img src="https://media.gq-magazine.co.uk/photos/5dbc4d5a8da8f900083b9076/master/w_1000,c_limit/20191028-watch-guide-baume.jpg" width="100px" alt='' />
-                        <button className="view-product-btn">View</button>{/* button positioned at higher z-index and positioned over image*/}
+                        <button className="view-product-btn">View</button>
                         <ul>
                                 <li>Product Brand</li>
                                 <li>Product Name</li>
@@ -46,13 +51,13 @@ export default class ProductGrid extends Component {
                     </div>
                     <div>
                         <img src="https://media.gq-magazine.co.uk/photos/5dbc4d5a8da8f900083b9076/master/w_1000,c_limit/20191028-watch-guide-baume.jpg" width="100px" alt='' />
-                        <button className="view-product-btn">View</button>{/* button positioned at higher z-index and positioned over image*/}
+                        <button className="view-product-btn">View</button>
                         <ul>
                                 <li>Product Brand</li>
                                 <li>Product Name</li>
                                 <li>Price</li>
                         </ul>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         )
